@@ -72,9 +72,6 @@ Plug 'tomasr/molokai'
 
 Plug 'mileszs/ack.vim'
 
-Plug 'dag/vim-fish'
-autocmd FileType fish compiler fish
-
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 let g:deoplete#enable_at_startup = 1
