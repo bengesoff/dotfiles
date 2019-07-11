@@ -1,7 +1,8 @@
 " Spaces and Tabs {{{
-set tabstop=2		      " number of visual spaces per tab
-set shiftwidth=2      " two spaces for >> and <<
+set tabstop=4		      " number of visual spaces per tab
+set shiftwidth=4      " two spaces for >> and <<
 set smartindent       " insert indentation if it looks like a good idea
+set expandtab					" all tabs are spaces
 " }}}
 
 " UI config {{{
