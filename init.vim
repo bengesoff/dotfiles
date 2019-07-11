@@ -85,7 +85,7 @@ call plug#end()
 " NERDTree {{{
 " open NERDTree if there isn't a file open and also close it if it's the last
 " open thing
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle with Ctrl-t
 nmap <silent> <C-t> :NERDTreeToggle<CR>
 " }}}
