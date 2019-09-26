@@ -40,6 +40,7 @@ set foldlevelstart=10                           " open most folds by default
 set foldnestmax=10                              " limit folds to 10 levels nesting
 " toggle folds with Space
 nnoremap <space> za
+vnoremap <space> zf
 set foldmethod=syntax                           " set folds based on indent level
 " }}}
 
@@ -75,9 +76,14 @@ Plug 'mileszs/ack.vim'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-let g:deoplete#enable_at_startup = 1
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" Python folding
+Plug 'tmhedberg/SimpylFold'
+
+Plug 'vim-airline/vim-airline'
+
+Plug 'mhinz/vim-startify'
+
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 " }}}
@@ -88,6 +94,12 @@ call plug#end()
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle with Ctrl-t
 nmap <silent> <C-t> :NERDTreeToggle<CR>
+" }}}
+
+" Deoplete {{{
+let g:deoplete#enable_at_startup = 1
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " }}}
 
 " Colorscheme {{{
